@@ -11,6 +11,6 @@ public class Friends {
     }
 
     public double CalculateExpenses() {
-        return 0;
+        return 0.0;
     }
 }
