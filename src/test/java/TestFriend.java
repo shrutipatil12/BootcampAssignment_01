@@ -37,5 +37,12 @@ public class TestFriend {
         AmountToPay friend = new Friends(name,zeroMoneyPaid,zeroMoneyToPay);
         Assertions.assertEquals(0.0,friend.payAmount());
     }
-
+    @Test
+    public void givenSpentFiveHundredMoneyByBunnyForTwoFriends_WhenCalculate_ThenShouldReturnFiveHundred() {
+        String name = "Bunny";
+        double fiveHundredMoneyPaid = 500;
+        double zeroMoneyToPay = 0.0;
+        AmountToPay friend = new Friends(name, fiveHundredMoneyPaid, zeroMoneyToPay);
+        Assertions.assertEquals(500, friend.payAmount());
+    }
 }
