@@ -21,5 +21,13 @@ public class TestFriend {
         Assertions.assertEquals(0.0, friend.payAmount());
     }
 
+        @Test
+    public void givenSpentThreeHundredMoneyByDarshanForTwoFriends_WhenCalculate_ThenShouldReturnThreeHundred(){
+        String name="Darshan";
+        double threeHundredMoneyPaid = 300;
+        double zeroMoneyToPay=0.0;
+        AmountToPay friend = new Friends(name,threeHundredMoneyPaid,zeroMoneyToPay);
+        Assertions.assertEquals(300,friend.payAmount());
+    }
 
 }
