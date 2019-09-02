@@ -35,4 +35,8 @@ public class Friends implements AmountToPay {
     }
 
 
+    public double calculateExpensesForAll() {
+        double calculateAmount=calculateExpensesSpentForFriends();
+        return  calculateAmount*3;
+    }
 }

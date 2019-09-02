@@ -70,6 +70,26 @@ public class TestFriend {
         Assertions.assertEquals(150, friend.calculateExpensesSpentForFriends());
     }
 
+    @Test
+    public void givenSpentundredMoneyByAlexForFourFriends_WhenCalculate_ThenShouldReturnTwentyFive() {
+        List<String> friendsList = new ArrayList<>();
+        friendsList.add("Alex");
+        friendsList.add("Bunny");
+        friendsList.add("Chetan");
+        friendsList.add("Darshan");
+        Friends friend = new Friends("Alex", 100, friendsList);
+        Assertions.assertEquals(25, friend.calculateExpensesSpentForFriends());
+    }
+    @Test
+    public void givenSpentHundredMoneyByAlexForFourFriends_WhenCalculate_ThenShouldReturnSeventyFive() {
+        List<String> friendsList = new ArrayList<>();
+        friendsList.add("Alex");
+        friendsList.add("Bunny");
+        friendsList.add("Chetan");
+        friendsList.add("Darshan");
+        Friends friend = new Friends("Alex", 100, friendsList);
+        Assertions.assertEquals(75, friend.calculateExpensesForAll());
+    }
 
 
 }
